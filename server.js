@@ -10,12 +10,11 @@ app.use(express.static('public'));
 
 app.use(require('./routes'));
 
-mongoose.connect('mongodb://localhost/18-NoSQL-Social-Network-API', {
+mongoose.connect('mongodb://127.0.0.1/18-NoSQL-Social-Network-API', {
   useFindAndModify: false,
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
-
 
 
 app.listen(PORT, () => console.log(`Running on localhost:${PORT}`));
